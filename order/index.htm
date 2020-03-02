@@ -1,0 +1,41 @@
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>登入頁面</title>
+</head>
+<body>
+<form action="http://127.0.0.1:8081/process_get">
+<p>這裡用get的方法實踐</p>
+名字:<input type="text" name="first_name">
+<br>
+姓氏:<input type="text" name="last_name">
+<input type="submit" value="提交">
+</form>
+<p>以下用post的方法實踐</p>
+<form action="http://127.0.0.1:8081/process_post" method="POST">
+帳號:<input type="text" name="acc">
+<br>
+密碼:<input type="text" name="pass">
+<input type="submit" value="登入">
+</form>
+
+<input type="submit" value="登入">
+
+<a href="http://127.0.0.1:8081/list_user">
+   <input type="button" value="列表">
+</a>
+
+<a href="http://www.google.com/">
+   <button>Visit Google</button>
+</a>
+<p>
+<span id="jname"></span>，您好!<br /> 
+</p>
+
+<script>
+var parsedObj = JSON.parse(response);
+document.getElementById("jname").innerHTML=parsedObj.first_name
+</script>
+
+</body>
+</html>
